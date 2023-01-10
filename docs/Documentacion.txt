@@ -1,0 +1,17 @@
+1. instalar vs code
+2. ir a https://create-react-app.dev/docs/adding-typescript/
+3. crear el proyecto y abrir en la terminal
+4. ejecutar el comando npx create-react-app my-app --template typescript y cambiar my-app por otro  nombre si  se desea
+5. una vez creada ejecutar el comando npm run start
+6. Ahora instalar npm install react-router-dom
+7. Ahora agregar Bootstrap npm install react-bootstrap bootstrap mirar la documentation
+8. programar 
+9. Iconos con Flaticon 
+10. publicar
+
+git remote add origin https://github.com/HarryMendoza/Pokedex_react.git
+git branch -M main
+git push -u origin main
+
+https://unpkg.com/pokemons@1.1.0/pokemons.json 
+

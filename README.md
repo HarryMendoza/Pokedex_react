@@ -1,3 +1,20 @@
+# Web APP de listado  de pokemonos 
+
+sistema creado  para ver los pokemones creados en el archivo json
+
+# prerequisitos
+Para inicializar la aplicacion se requiere lo siguiente
+
+1. node js
+2. vscode
+3. git
+
+# construido con 
+
+1. vscode
+2. git
+3. react
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
