@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Figure from 'react-bootstrap/Figure';
-import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import { getPokemons } from "../controller/getpokemon";
 import { Pokemon } from "../models/pokemon.m";
 
