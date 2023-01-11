@@ -37,9 +37,7 @@ export function CorreguirNombre(name: string): string {
         return name.replace("farfetch'd", "farfetchd");
 
     } else if (name.includes("mr.-mime")) {
-        return name.replace("mr.-mime", "mr-minme");
-    } else if (name.includes("mr.-mime")) {
-        return name.replace("mr.-mime", "mr-minme");
+        return name.replace("mr.-mime", "mr-mime");
     } else if (name.includes("♀")) {
         return name.replace("♀", "-m");
     } else if (name.includes("♂")) {

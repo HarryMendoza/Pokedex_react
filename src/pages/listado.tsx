@@ -3,8 +3,11 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Figure from 'react-bootstrap/Figure';
+import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import { getPokemons } from "../controller/getpokemon";
 import { Pokemon } from "../models/pokemon.m";
+
+
 
 const Listado = () => {
 
@@ -25,27 +28,32 @@ const Listado = () => {
 
     return (
         <>
-            <h1>Coleccion de Pokemones</h1>
+            <h1 className="h1">Coleccion de Pokemones</h1>
             <header>
                 <input
                     value={query}
                     placeholder="Buscar pokemones"
                     onChange={(event) => setQuery(event.target.value.trim())}
                     type="text"
+                    ///width="100%"
+                    className="input"
                 />
             </header>
             <div className="content-wrapper">
                 <div className='content'>
 
-                    <div className="row" gap-4>
-                        {filtarPokemon?.slice(0, 150).map((pokemon) => (
-                            <Card className="mx-auto" style={{ width: '18rem' }}>
-                                <Card.Header><b>Tipo</b> {pokemon.type}</Card.Header>
+                    <div className="row" gap-4 gap-3 >
+                        {filtarPokemon?.slice(0, 200).map((pokemon) => (
+                            <Card className="mx-auto " style={{ backgroundColor: "#34495E", width: '18rem', color: "#F4F6F7" }}
+
+
+                            >
+                                <Card.Header className="card-title"><b>Tipo:</b> {pokemon.type}</Card.Header>
                                 <Card.Img width="80" height="100" variant="top" src={pokemon.imggif} className="d-block mx-auto w-50" />
                                 <Card.Body>
-                                    <Card.Title className="text-center">{pokemon.id} - {pokemon.name}</Card.Title>
-                                    <ListGroup variant="flush">
-                                        <ListGroup.Item>
+                                    <Card.Title className="card-title" >{pokemon.id} - {pokemon.name}  </Card.Title>
+                                    <ListGroup style={{ backgroundColor: "#BDC3C7" }}>
+                                        <ListGroup.Item className="list-item-style">
                                             <Figure.Image
                                                 width={16}
                                                 height={16}
