@@ -8,7 +8,7 @@ import Listado from './pages/listado';
 function App() {
   return (
     <Router>
-      <div style={{ backgroundColor: "#2E4053" }}>
+      <div className='bg-clr'>
         <Routes>
           <Route path="/" element={<Listado />} />
         </Routes>

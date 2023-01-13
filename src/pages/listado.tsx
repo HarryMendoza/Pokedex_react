@@ -6,8 +6,6 @@ import Figure from 'react-bootstrap/Figure';
 import { getPokemons } from "../controller/getpokemon";
 import { Pokemon } from "../models/pokemon.m";
 
-
-
 const Listado = () => {
 
     const [pokemons, setPokemons] = useState<Pokemon[]>([]);
@@ -21,7 +19,7 @@ const Listado = () => {
         ObtenerTodos();
     });
 
-    const filtarPokemon = pokemons?.slice(0, 151).filter((pokemon) => {
+    const filtarPokemon = pokemons?.slice(0, 300).filter((pokemon) => {
         return pokemon.name.toLowerCase().match(query.toLowerCase());
     })
 
@@ -38,56 +36,53 @@ const Listado = () => {
                     className="input"
                 />
             </header>
-            <div className="content-wrapper">
+            <div className="content-wrapper" >
                 <div className='content'>
 
-                    <div className="row" gap-4 gap-3 >
-                        {filtarPokemon?.slice(0, 200).map((pokemon) => (
-                            <Card className="mx-auto " style={{ backgroundColor: "#34495E", width: '18rem', color: "#F4F6F7" }}
-
-
-                            >
+                    <div className="row" gap-4 >
+                        {filtarPokemon?.slice(0, 300).map((pokemon) => (
+                            <Card className="mx-auto " style={{ backgroundColor: "#34495E", width: '18rem', color: "#F4F6F7", marginBottom: 20 }}>
                                 <Card.Header className="card-title"><b>Tipo:</b> {pokemon.type}</Card.Header>
-                                <Card.Img width="80" height="100" variant="top" src={pokemon.imggif} className="d-block mx-auto w-50" />
+                                <Card.Img width="80" height="100" src={pokemon.imggif} className="d-block mx-auto w-50" />
                                 <Card.Body>
                                     <Card.Title className="card-title" >{pokemon.id} - {pokemon.name}  </Card.Title>
                                     <ListGroup style={{ backgroundColor: "#BDC3C7" }}>
-                                        <ListGroup.Item className="list-item-style">
+                                        <ListGroup.Item className="bg-secondary text-light">
                                             <Figure.Image
                                                 width={16}
                                                 height={16}
                                                 alt="171x180"
                                                 src="https://cdn-icons-png.flaticon.com/512/525/525872.png" /> <b>HP:</b> {pokemon.hp}
                                         </ListGroup.Item>
-                                        <ListGroup.Item>
+                                        <ListGroup.Item className="bg-secondary text-light">
                                             <Figure.Image
                                                 width={16}
                                                 height={16}
                                                 alt="171x180"
                                                 src="https://cdn-icons-png.flaticon.com/512/3522/3522092.png" /> <b>Ataque:</b> {pokemon.attack}
                                         </ListGroup.Item>
-                                        <ListGroup.Item>
+                                        <ListGroup.Item className="bg-secondary text-light">
                                             <Figure.Image
                                                 width={16}
                                                 height={16}
                                                 alt="171x180"
                                                 src="https://cdn-icons-png.flaticon.com/512/8037/8037114.png" /> <b>Defensa:</b> {pokemon.defense}
                                         </ListGroup.Item>
-                                        <ListGroup.Item>
+                                        <ListGroup.Item className="bg-secondary text-light">
                                             <Figure.Image
                                                 width={16}
                                                 height={16}
                                                 alt="171x180"
                                                 src="https://cdn-icons-png.flaticon.com/512/3637/3637532.png" /> <b>E. Ataque:</b> {pokemon.sp_atk}
                                         </ListGroup.Item>
-                                        <ListGroup.Item>
+                                        <ListGroup.Item className="bg-secondary text-light">
                                             <Figure.Image
                                                 width={16}
                                                 height={16}
                                                 alt="171x180"
                                                 src="https://cdn-icons-png.flaticon.com/512/1065/1065501.png" /> <b>E. Defensa:</b> {pokemon.sp_def}
                                         </ListGroup.Item>
-                                        <ListGroup.Item>
+                                        <ListGroup.Item className="text-light" style={{ background: "#FFC300" }}>
                                             <Figure.Image
                                                 width={16}
                                                 height={16}
